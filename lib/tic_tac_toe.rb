@@ -99,17 +99,17 @@ class TicTacToe
 
   
   
-  def play
-    @board = board || Array.new(9," ")
-    until over?
-      turn
-      if won? 
-        puts "Congratulations #{winner}!"
-      else
-        puts "Cat's Game!"
-      end
-    end
-  end
+  def play(board)
+   until over?(board) 
+      turn(board)
+   end 
+   if won?(board)
+      winner(board) == "X" || winner(board) == "O" 
+      puts "Congratulations #{winner(board)}!" 
+   elsif draw?(board)
+      puts "Cats Game!" 
+   end 
+end
   
   
   
