@@ -77,6 +77,9 @@ class TicTacToe
     return a||b
   end
   
+  def full?
+    
+  end
   
   
 end
