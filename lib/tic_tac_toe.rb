@@ -77,13 +77,13 @@ class TicTacToe
     return a||b
   end
   
-    def full?
+  def full?
     !@board.any? {|token| token == "" || token == " " }
-    end
+  end
     
-    def draw?
-      
-    end
+  def draw?
+    full? && !won?
+  end
   
   
 end
