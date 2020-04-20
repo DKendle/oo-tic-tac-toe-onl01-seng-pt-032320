@@ -79,7 +79,11 @@ class TicTacToe
   
     def full?
     !@board.any? {|token| token == "" || token == " " }
-  end
+    end
+    
+    def draw?
+      
+    end
   
   
 end
