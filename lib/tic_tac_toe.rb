@@ -89,6 +89,14 @@ class TicTacToe
     won? || full?
   end
   
+  def winner
+    won? || 
+  end
+  
+  
+  
+  
+  
   def play
     @board = board || Array.new(9," ")
     turn until over?
