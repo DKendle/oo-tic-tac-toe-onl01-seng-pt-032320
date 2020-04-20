@@ -37,7 +37,9 @@ class TicTacToe
     @board[index] = token
   end
   
-   #binding.pry
+  def position_taken?(index)
+    @board[index] = 
+  end
   
   
 end
