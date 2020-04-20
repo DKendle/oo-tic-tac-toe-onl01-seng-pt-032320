@@ -3,12 +3,12 @@ require "pry"
 class TicTacToe
   attr_accessor :board
   
-  #initializes the board as an array with 9 ""
+ 
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
   
-  ##Displays an instant of the playing board to the terminal
+  
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -17,7 +17,7 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   
-  #defines the 8 winning combinations to finish game
+  
   WIN_COMBINATIONS = [
     [0,1,2], 
     [0,4,8],
@@ -32,16 +32,16 @@ class TicTacToe
   def input_to_index(input)
     input.to_i - 1
   end
-  ##move
+  
   def move(index, token = "X")
     @board[index] = token
   end
   
-  ##checks to see if the move is vacant, ran after input_to_index
+ 
   def position_taken?(index)
     !(@board[index].nil? || @board[index] == " ")
   end
-  ##checks for a valid move
+  
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
   end
