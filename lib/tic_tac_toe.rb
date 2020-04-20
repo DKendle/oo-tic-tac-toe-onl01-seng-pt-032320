@@ -102,11 +102,11 @@ class TicTacToe
   def play
     @board = board || Array.new(9," ")
     turn until over?
-    if won? 
-      puts "Congratulations #{winner}!"
-    else
-      puts "Cat's Game!"
-    end
+      if won? 
+        puts "Congratulations #{winner}!"
+      else
+        puts "Cat's Game!"
+      end
   end
   
   
