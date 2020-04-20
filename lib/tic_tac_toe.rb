@@ -101,9 +101,9 @@ class TicTacToe
     @board = board || Array.new(9," ")
     turn until over?
     if won?
-      puts "Congratulations #{winner}, you are the Winner!"
+      puts "Congratulations #{winner}!"
     else
-      "It was a draw!"
+      "Cat's Game"
     end
     
   end
