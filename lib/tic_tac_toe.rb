@@ -90,23 +90,12 @@ class TicTacToe
   end
   
   def winner
-    if won?
-      @board[won?[0]] == "X" ? "X" : "O"
-    else
-      nil
-    end
+    turn until over?
+    won? ? puts("Congratulations #{winner}!") : puts("Cat's Game!")
+  end
   end
   
-  def play
-    @board = board || Array.new(9," ")
-    turn until over?
-    if won?
-      puts "Congratulations #{winner}!"
-    else
-      "Cat's Game"
-    end
-    
-  end
+  
   
   
 end
