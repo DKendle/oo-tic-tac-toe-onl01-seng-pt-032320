@@ -103,12 +103,12 @@ class TicTacToe
     @board = board || Array.new(9," ")
     until over?
       turn
-    end
       if won? 
         puts "Congratulations #{winner}!"
       else
         puts "Cat's Game!"
       end
+    end
   end
   
   
